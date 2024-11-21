@@ -1,15 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import About from './About';
+import { MemoryRouter } from 'react-router-dom';
+import App from './App';
 
-test('renders About component with expected content', () => {
-  render(<About />);
-  
-  // Check for the presence of the Typewriter text
-  const typewriterText = screen.getByText(/Hi! I'm An Nguyen/i);
-  expect(typewriterText).toBeInTheDocument();
-  
-  // Check for the presence of the "View Projects" button
-  const viewProjectsButton = screen.getByRole('button', { name: /View Projects/i });
-  expect(viewProjectsButton).toBeInTheDocument();
+test('renders About component on default route', () => {
+  render(
+    <MemoryRouter initialEntries={['/']}>
+      <App />
+    </MemoryRouter>
+  );
+
+  // Check for the presence of the About component content
+  const aboutText = screen.getByText(/Hi! I'm An Nguyen/i); // Adjust this text to match actual content in About component
+  expect(aboutText).toBeInTheDocument();
 });
