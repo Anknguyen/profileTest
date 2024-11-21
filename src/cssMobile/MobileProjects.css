@@ -1,0 +1,232 @@
+@media (max-width: 768px) {
+
+    .projectOverlayMobile{
+      margin-top: 30px;
+      position:relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ecfffe;
+    }
+
+    .projectsTitle{
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: white;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      font-family: 'Montserrat', sans-serif;
+      background-color: transparent;
+      z-index: 1;
+    }
+
+    .projectsBackgroundMobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ecfffe;
+      width: 90vw;
+      padding-top: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .downArrow {
+      border: none;
+      background: none;
+      padding: 0;
+      appearance: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #94dddb;
+      opacity: 0.6;
+      font-size: 2em;
+      cursor: pointer;
+      user-select: none;
+      z-index: 20;
+      transition: opacity 0.6s;
+      animation: bounce 2s infinite;
+    }
+  
+    .downArrow:hover {
+      opacity: 1;
+    }
+  
+    .downArrow.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+  
+    .PMContainer{
+      padding-top: 30px;
+      width: 90vw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #68b9b7;
+      border-radius: 25px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      overflow:hidden;
+      position:relative;
+    }
+  
+    .projectMobile {
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      padding: 0px;
+      margin: 10px 0;
+      border: none;
+      font-size: 1.2em;
+      color: white;
+      width: 80vw;
+      height: 50vh;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 0;
+      background-color: white;
+      z-index: 5;
+    }
+
+    /* .projectMobile:hover {
+      background: rgba(0, 0, 0, 0.25);
+    } */
+
+    /* .projectMobile::before {
+      border-radius: 15px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: -1;
+    } */
+  
+    .projectTitle {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1em;
+      font-weight: 400;
+      width: 70%;
+      margin-bottom: 5vh;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+      padding: 8px 20px;
+      position: absolute;
+      bottom: 0;
+      border-radius: 35px;
+      z-index: 1; /* Ensure the text is above the pseudo-element */
+      background-color: #32c0c0;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    .projectTitle:hover
+    {
+      background-color: #178f8f;
+    }
+
+
+    .codeSnippetM1, .codeSnippetM2, .codeSnippetM3 {
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        font-family: 'Courier New', Courier, monospace;
+        opacity: .25;
+        user-select: none;
+        overflow: hidden;
+      }
+    
+    .codeSnippetMobile{
+        position:absolute;
+        height:  100%;
+        z-index: 0;
+    }
+
+    .toggleBar {
+      margin-bottom: 30px;
+      width: 70vw; /* Adjust the width as needed */
+      height: 40px; /* Adjust the height as needed */
+      background-color: #178f8f; /* Adjust the background color as needed */
+      border-radius: 35px; /* Make it rounded */
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+    }
+    
+    .toggleCircle {
+      width: 35vw; /* Half the width of the bar */
+      height: 100%; /* Adjust the height as needed */
+      background-color: #49d3d3; /* Adjust the background color as needed */
+      border-radius: 35px; /* Keep the edges rounded */
+      position: absolute;
+      top: 0;
+    }
+
+    .leftToggle
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background-color: transparent;
+      border-radius: 15px 0 0 15px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 500;
+      position:absolute;
+      left: 0;
+      top:0;
+      font-family : 'Montserrat', sans-serif;
+      opacity: 0.7;
+      z-index: 3;
+    }
+
+    .rightToggle
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background-color:transparent;
+      border-radius: 0 15px 15px 0;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 500;
+      position:absolute;
+      right: 0;
+      top:0;
+      font-family : 'Montserrat', sans-serif;
+      opacity: 0.7;
+      z-index: 3;
+    }
+
+    .shown {
+      opacity: 1;
+    }
+  }

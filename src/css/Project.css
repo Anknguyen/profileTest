@@ -1,0 +1,389 @@
+.projectsContainer {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background-color: #30928d;
+  width: 100vw;
+}
+
+.downArrow{
+  border: none; /* Remove default border */
+  background: none; /* Remove default background */
+  padding: 0; /* Remove default padding */
+  appearance: none; /* Remove default appearance */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #94dddb;
+  opacity: 0.6;
+  font-size: 2em;
+  /* cursor: pointer; */
+  user-select: none;
+  z-index: 20;
+  transition: opacity 0.6s;
+  animation: bounce 2s infinite;
+}
+
+
+.downArrow.hidden {
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  height: 170vh; /* Full height of the viewport */
+  background-color: #30928d;
+  width: 100vw;
+  position: relative;
+  transition: width 0.5s ease;
+}
+
+.project {
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 20px 30px;
+  border: none;
+  font-size: 1.2em;
+  z-index: 1;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.projectTitle {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  min-width: 30vw;
+  max-width: auto;
+  min-height: 10%;
+  max-height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  padding: 8px 20px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 35px;
+  z-index: 1; /* Ensure the text is above the pseudo-element */
+  background-color: #32c0c0;
+  border: none;
+  transition: background-color 0.3s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  white-space:normal;
+  word-wrap: break-word;
+  overflow:hidden;
+}
+
+.project1b:hover, .project2b:hover, .project3b:hover, .project4b:hover, .project5b:hover, .project6b:hover {
+  transform: scale(1.1) !important; 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2) !important; 
+  opacity: 1 !important;
+  z-index: 6 !important;
+}
+
+.project1b:hover + .project1, .project3b:hover + .project3, .project4b:hover + .project4, .project6b:hover + .project6 {
+  transform: translateX(5%) scale(1.1);
+}
+
+.project2b:hover + .project2, .project5b:hover + .project5 {
+  transform: translateX(-5%) scale(1.1);
+}
+
+.project1 {
+  background-image: url('../../public/img/websiteimg1.jpg');
+  background-position: center;
+  color: white;
+  width: 40vw;
+  max-width: 800px;
+  height: 40vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: absolute; /* Position project2 absolutely */
+  top: 13vh; /* Adjust the top value to overlap project1 */
+  left: 1vw; /* Position it on the right side */
+}
+
+.project1b {
+  background-image: url('../../public/img/websiteimg1.jpg');
+  background-position: center;
+  color: white;
+  width: 40vw;
+  max-width: 800px;
+  height: 40vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: absolute; /* Position project2 absolutely */
+  top: 13vh; /* Adjust the top value to overlap project1 */
+  left: 1vw; /* Position it on the right side */
+  z-index: 5;
+  opacity: 0;
+}
+
+.project2 {
+  background-image: url('../../public/img/websiteimg2.jpg');
+  background-position: center;
+  color: white;
+  width: 70vw;
+  max-width: 1200px;
+  height: 40vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project2 absolutely */
+  top: 20vh; /* Adjust the top value to overlap project1 */
+  right: 1vw; /* Position it on the right side */
+}
+
+.project2b {
+  background-image: url('../../public/img/websiteimg2.jpg');
+  background-position: center;
+  color: white;
+  width: 70vw;
+  max-width: 1200px;
+  height: 40vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project2 absolutely */
+  top: 20vh; /* Adjust the top value to overlap project1 */
+  right: 1vw; /* Position it on the right side */
+  z-index: 5;
+  opacity: 0;
+}
+
+.project3 {
+  background-image: url('../../public/img/coffeelaptop3.jpg');
+  background-position: center;
+  color: white;
+  width: 65vw;
+  max-width: 1000px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 65vh; /* Position it below project2 */
+  left: 1vw; /* Position it on the left side */
+}
+
+.project3b {
+  background-image: url('../../public/img/coffeelaptop3.jpg');
+  background-position: center;
+  color: white;
+  width: 65vw;
+  max-width: 1000px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 65vh; /* Position it below project2 */
+  left: 1vw; /* Position it on the left side */
+  z-index: 5;
+  opacity: 0;
+}
+
+.project4 {
+  background-image: url('../../public/img/websiteimg2.jpg');
+  background-position: center;
+  color: white;
+  width: 40vw;
+  max-width: 700px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 102vh; /* Position it below project2 */
+  left: 1vw; /* Position it on the left side */
+}
+
+.project4b {
+  background-image: url('../../public/img/websiteimg2.jpg');
+  background-position: center;
+  color: white;
+  width: 40vw;
+  max-width: 700px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 102vh; /* Position it below project2 */
+  left: 1vw; /* Position it on the left side */
+  z-index: 5;
+  opacity: 0;
+}
+
+.project5 {
+  background-image: url('../../public/img/websiteimg1.jpg');
+  background-position: center;
+  color: white;
+  width: 55vw;
+  max-width: 900px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 110vh; /* Position it below project2 */
+  right: 1vw; /* Position it on the left side */
+}
+
+.project5b {
+  background-image: url('../../public/img/websiteimg1.jpg');
+  background-position: center;
+  color: white;
+  width: 55vw;
+  max-width: 900px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 110vh; /* Position it below project2 */
+  right: 1vw; /* Position it on the left side */
+  z-index: 5;
+  opacity: 0;
+}
+
+.project6 {
+  background-image: url('../../public/img/coffeelaptop3.jpg');
+  background-position: center;
+  color: white;
+  width: 60vw;
+  max-width: 850px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 140vh; /* Position it below project2 */
+  left: 1vw; /* Position it on the left side */
+}
+
+.project6b {
+  background-image: url('../../public/img/coffeelaptop3.jpg');
+  background-position: center;
+  color: white;
+  width: 60vw;
+  max-width: 850px;
+  height: 30vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position project3 absolutely */
+  top: 140vh; /* Position it below project2 */
+  left: 1vw; /* Position it on the left side */
+  z-index: 5;
+  opacity: 0;
+}
+
+.codeSnippet1 {
+  font-size: 1.5rem;
+  position: absolute; /* Position project3 absolutely */
+  top: 50vh; /* Position it below project2 */
+  left: 0px; /* Position it on the left side */
+  background-color: transparent;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.13;
+  user-select: none;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.codeSnippet2 {
+  height: 40vh;
+  font-size: 1.5rem;
+  position: absolute; /* Position project3 absolutely */
+  top: 65vh; /* Position it below project2 */
+  right: 0px; /* Position it on the left side */
+  background-color: transparent;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.13;
+  user-select: none;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.codeSnippet3 {
+  height: 40vh;
+  font-size: 1.5rem;
+  position: absolute; /* Position project3 absolutely */
+  top: 135vh; /* Position it below project2 */
+  right: 50px; /* Position it on the left side */
+  background-color: transparent;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.13;
+  user-select: none;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.codeSnippet1 pre, .codeSnippet2 pre, .codeSnippet3 pre {
+  margin: 0;
+}
+
+.codeSnippet1 code, .codeSnippet2 code, .codeSnippet3 code {
+  display: block;
+  white-space: pre;
+}
+
+
+@media (min-width: 2000px) {
+  .projects {
+    width: 90vw;
+  }
+}
+@media (min-width: 2200px) {
+  .projects {
+    width: 80vw;
+  }
+}
+@media (min-width: 2400px) {
+  .projects {
+    width: 70vw;
+  }
+}
+@media (min-width: 2600px) {
+  .projects {
+    width: 65vw;
+  }
+}
+@media (min-width: 2800px) {
+  .projects {
+    width: 60vw;
+  }
+}
+@media (min-width: 3000px) {
+  .projects {
+    width: 55vw;
+  }
+}
+
+.project.slide-in {
+  /* opacity: 1; */
+  transform: translateX(0); /* Slide in to original position */
+  transition: transform .65s ease, opacity 0.5s ease, box-shadow 0.5s ease !important;
+}
+
+.leftSlide {
+  transform: translateX(-30%); /* Slide in from the left */
+}
+
+.leftSlide:hover {
+  transform: translateX(5%) scale(1.1) !important; /* Slide in from the left */
+}
+
+.rightSlide:hover {
+  transform: translateX(-5%) scale(1.1) !important; /* Slide in from the left */
+}
+
+.rightSlide{
+  transform: translateX(30%); /* Slide in from the right */
+}
