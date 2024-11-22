@@ -2,8 +2,32 @@
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  background-color: #30928d;
+  background-color: #096863;
+  flex-direction: column;
   width: 100vw;
+  height: 100%;
+}
+
+.projectsHeader{
+  
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.5em;
+  font-weight: 500;
+  margin-left: 20vw;
+}
+
+.projectsHeaderContainer{
+  padding: 10px;
+  border-radius: 50px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width:110vw;
+  height: 20vh;
+  background-color: #a7d4d2;
+
 }
 
 .downArrow{
@@ -45,26 +69,94 @@
 
 .projects {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 120px;
-  height: 170vh; /* Full height of the viewport */
-  background-color: #30928d;
-  width: 100vw;
+  height: 100%;
+  background-color: #096863;
+  width: 96vw;
   position: relative;
   transition: width 0.5s ease;
+  justify-content: center;
+  padding-bottom:25px;
+  overflow: hidden;
+  
 }
 
-.project {
-  border-radius: 25px;
-  cursor: pointer;
-  padding: 20px 30px;
-  border: none;
-  font-size: 1.2em;
-  z-index: 1;
+.leftColumn {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
 }
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+
+.project{
+  border-radius: 35px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0aadad;
+  position: relative;
+  z-index:1;
+  overflow: hidden;
+  margin-top: 25px;
+  width: 96%;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  background-color: #32c0c0;
+}
+
+/* Left Row */
+
+.project1 {
+  height: 45vh;
+  min-height: 300px; /* Minimum height in pixels */
+  max-height: 600px; /* Maximum height in pixels */
+}
+
+.project2 {
+  height: 70vh;
+  min-height: 400px; /* Minimum height in pixels */
+  max-height: 800px; /* Maximum height in pixels */
+}
+
+.project3 {
+  height: 55vh;
+  min-height: 350px; /* Minimum height in pixels */
+  max-height: 700px; /* Maximum height in pixels */
+}
+
+/* Right Row */
+
+.project4 {
+  height: 85vh;
+  min-height: 500px; /* Minimum height in pixels */
+  max-height: 900px; /* Maximum height in pixels */
+}
+
+.project5 {
+  height: 87vh;
+  min-height: 575px; /* Minimum height in pixels */
+  max-height: 920px; /* Maximum height in pixels */
+}
+
+
 
 .projectTitle {
   color: white;
@@ -75,13 +167,10 @@
   max-width: auto;
   min-height: 10%;
   max-height: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  padding: 8px 20px;
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   border-radius: 35px;
-  z-index: 1; /* Ensure the text is above the pseudo-element */
-  background-color: #32c0c0;
+  z-index: 1;
   border: none;
   transition: background-color 0.3s;
   text-align: center;
@@ -93,196 +182,11 @@
   overflow:hidden;
 }
 
-.project1b:hover, .project2b:hover, .project3b:hover, .project4b:hover, .project5b:hover, .project6b:hover {
-  transform: scale(1.1) !important; 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2) !important; 
-  opacity: 1 !important;
-  z-index: 6 !important;
-}
-
-.project1b:hover + .project1, .project3b:hover + .project3, .project4b:hover + .project4, .project6b:hover + .project6 {
-  transform: translateX(5%) scale(1.1);
-}
-
-.project2b:hover + .project2, .project5b:hover + .project5 {
-  transform: translateX(-5%) scale(1.1);
-}
-
-.project1 {
-  background-image: url('../../public/img/websiteimg1.jpg');
-  background-position: center;
-  color: white;
-  width: 40vw;
-  max-width: 800px;
-  height: 40vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  position: absolute; /* Position project2 absolutely */
-  top: 13vh; /* Adjust the top value to overlap project1 */
-  left: 1vw; /* Position it on the right side */
-}
-
-.project1b {
-  background-image: url('../../public/img/websiteimg1.jpg');
-  background-position: center;
-  color: white;
-  width: 40vw;
-  max-width: 800px;
-  height: 40vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  position: absolute; /* Position project2 absolutely */
-  top: 13vh; /* Adjust the top value to overlap project1 */
-  left: 1vw; /* Position it on the right side */
-  z-index: 5;
-  opacity: 0;
-}
-
-.project2 {
-  background-image: url('../../public/img/websiteimg2.jpg');
-  background-position: center;
-  color: white;
-  width: 70vw;
-  max-width: 1200px;
-  height: 40vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project2 absolutely */
-  top: 20vh; /* Adjust the top value to overlap project1 */
-  right: 1vw; /* Position it on the right side */
-}
-
-.project2b {
-  background-image: url('../../public/img/websiteimg2.jpg');
-  background-position: center;
-  color: white;
-  width: 70vw;
-  max-width: 1200px;
-  height: 40vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project2 absolutely */
-  top: 20vh; /* Adjust the top value to overlap project1 */
-  right: 1vw; /* Position it on the right side */
-  z-index: 5;
-  opacity: 0;
-}
-
-.project3 {
-  background-image: url('../../public/img/coffeelaptop3.jpg');
-  background-position: center;
-  color: white;
-  width: 65vw;
-  max-width: 1000px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 65vh; /* Position it below project2 */
-  left: 1vw; /* Position it on the left side */
-}
-
-.project3b {
-  background-image: url('../../public/img/coffeelaptop3.jpg');
-  background-position: center;
-  color: white;
-  width: 65vw;
-  max-width: 1000px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 65vh; /* Position it below project2 */
-  left: 1vw; /* Position it on the left side */
-  z-index: 5;
-  opacity: 0;
-}
-
-.project4 {
-  background-image: url('../../public/img/websiteimg2.jpg');
-  background-position: center;
-  color: white;
-  width: 40vw;
-  max-width: 700px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 102vh; /* Position it below project2 */
-  left: 1vw; /* Position it on the left side */
-}
-
-.project4b {
-  background-image: url('../../public/img/websiteimg2.jpg');
-  background-position: center;
-  color: white;
-  width: 40vw;
-  max-width: 700px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 102vh; /* Position it below project2 */
-  left: 1vw; /* Position it on the left side */
-  z-index: 5;
-  opacity: 0;
-}
-
-.project5 {
-  background-image: url('../../public/img/websiteimg1.jpg');
-  background-position: center;
-  color: white;
-  width: 55vw;
-  max-width: 900px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 110vh; /* Position it below project2 */
-  right: 1vw; /* Position it on the left side */
-}
-
-.project5b {
-  background-image: url('../../public/img/websiteimg1.jpg');
-  background-position: center;
-  color: white;
-  width: 55vw;
-  max-width: 900px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 110vh; /* Position it below project2 */
-  right: 1vw; /* Position it on the left side */
-  z-index: 5;
-  opacity: 0;
-}
-
-.project6 {
-  background-image: url('../../public/img/coffeelaptop3.jpg');
-  background-position: center;
-  color: white;
-  width: 60vw;
-  max-width: 850px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 140vh; /* Position it below project2 */
-  left: 1vw; /* Position it on the left side */
-}
-
-.project6b {
-  background-image: url('../../public/img/coffeelaptop3.jpg');
-  background-position: center;
-  color: white;
-  width: 60vw;
-  max-width: 850px;
-  height: 30vh;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Position project3 absolutely */
-  top: 140vh; /* Position it below project2 */
-  left: 1vw; /* Position it on the left side */
-  z-index: 5;
-  opacity: 0;
-}
-
 .codeSnippet1 {
   font-size: 1.5rem;
   position: absolute; /* Position project3 absolutely */
   top: 50vh; /* Position it below project2 */
-  left: 0px; /* Position it on the left side */
+  right: 0vw; /* Position it on the left side */
   background-color: transparent;
   color: #f8f8f2;
   padding: 20px;
@@ -297,8 +201,8 @@
   height: 40vh;
   font-size: 1.5rem;
   position: absolute; /* Position project3 absolutely */
-  top: 65vh; /* Position it below project2 */
-  right: 0px; /* Position it on the left side */
+  top: 40vh; /* Position it below project2 */
+  left: 0px; /* Position it on the left side */
   background-color: transparent;
   color: #f8f8f2;
   padding: 20px;
@@ -313,7 +217,7 @@
   height: 40vh;
   font-size: 1.5rem;
   position: absolute; /* Position project3 absolutely */
-  top: 135vh; /* Position it below project2 */
+  top: 130vh; /* Position it below project2 */
   right: 50px; /* Position it on the left side */
   background-color: transparent;
   color: #f8f8f2;
@@ -334,56 +238,34 @@
   white-space: pre;
 }
 
-
-@media (min-width: 2000px) {
+@media (min-width: 1400px) {
   .projects {
     width: 90vw;
   }
 }
-@media (min-width: 2200px) {
+
+@media (min-width: 1500px) {
   .projects {
     width: 80vw;
   }
 }
-@media (min-width: 2400px) {
+
+@media (min-width: 1600px) {
   .projects {
     width: 70vw;
   }
 }
-@media (min-width: 2600px) {
-  .projects {
-    width: 65vw;
-  }
-}
-@media (min-width: 2800px) {
+
+@media (min-width: 1800px) {
   .projects {
     width: 60vw;
   }
 }
-@media (min-width: 3000px) {
+
+@media (min-width: 2000px) {
   .projects {
-    width: 55vw;
+    width: 50vw;
   }
 }
 
-.project.slide-in {
-  /* opacity: 1; */
-  transform: translateX(0); /* Slide in to original position */
-  transition: transform .65s ease, opacity 0.5s ease, box-shadow 0.5s ease !important;
-}
 
-.leftSlide {
-  transform: translateX(-30%); /* Slide in from the left */
-}
-
-.leftSlide:hover {
-  transform: translateX(5%) scale(1.1) !important; /* Slide in from the left */
-}
-
-.rightSlide:hover {
-  transform: translateX(-5%) scale(1.1) !important; /* Slide in from the left */
-}
-
-.rightSlide{
-  transform: translateX(30%); /* Slide in from the right */
-}

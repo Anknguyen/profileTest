@@ -1,36 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../css/About.css';
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 
 function About() {
 
     const overflowRef = useRef(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-          if (overflowRef.current) {
-            const scrollTop = overflowRef.current.scrollTop;
-            const scrollHeight = overflowRef.current.scrollHeight - overflowRef.current.clientHeight;
-            const scrollPercentage = (scrollTop / scrollHeight) * 57;
-            document.querySelector('.scroll-bar').style.height = `${scrollPercentage}%`;
-          }
-        };
-    
-        const overlayElement = overflowRef.current;
-        if (overlayElement) {
-          overlayElement.addEventListener('scroll', handleScroll);
-        }
-    
-        return () => {
-          if (overlayElement) {
-            overlayElement.removeEventListener('scroll', handleScroll);
-          }
-        };
-      }, [overflowRef]);
 
     const { ref, inView } = useInView({
         triggerOnce: false, // Trigger the animation only once
@@ -90,9 +67,6 @@ function About() {
                             
                         />
                     </div>
-                    
-                        <div className="scroll-bar"></div>
-                        <div className="scroll-bar-container"></div>
                     
                     <div className="overflowContainer" ref={overflowRef}>
                         <motion.div

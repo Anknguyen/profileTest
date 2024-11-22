@@ -87,10 +87,9 @@ const bottomBarVariants = {
     }
 };
 
-function MobileNavbar({ setHomeKey }) {
+function MobileNavbar() {
     const [isTitleVisible, setIsTitleVisible] = useState(true);
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-    const [isLinkDisabled, setIsLinkDisabled] = useState(false);
     const [menuVisible, setMenuVisible] = useState(false);
     const [clipPath, setClipPath] = useState(null);
     const [exitClipPath, setExitClipPath] = useState(null);
@@ -262,7 +261,7 @@ function MobileNavbar({ setHomeKey }) {
     return (
         <div>
             <div className={`navContainerMobile ${isNavbarVisible ? 'visible' : 'hidden'} ${menuVisible ? '' : 'boxShadow'}`}>
-                <div className='navHome'>
+                <div className='navHomeMobile'>
                     <div className='navHomeContainer' ref={navHomeContainerRef}>
                         <button
                             className={`navHomeButton ${menuVisible ? 'menuVisible' : 'menuInvisible'}`}
@@ -321,7 +320,7 @@ function MobileNavbar({ setHomeKey }) {
                                 
                                 style={{ willChange: 'transform, opacity' }}
                             >
-                                <Link to="/" class="no-style" onClick={() => handleLinkClick('/')} disabled={isLinkDisabled}>
+                                <Link to="/" class="no-style" onClick={() => handleLinkClick('/')}>
                                     <div className='menuItem'>Home</div>
                                 </Link>
                             </motion.div>
@@ -333,7 +332,7 @@ function MobileNavbar({ setHomeKey }) {
                                 
                                 style={{ willChange: 'transform, opacity' }}
                             >
-                                <Link to="/projects" class="no-style" onClick={() => handleLinkClick('/projects')} disabled={isLinkDisabled}>
+                                <Link to="/projects" class="no-style" onClick={() => handleLinkClick('/projects')}>
                                     <div className='menuItem'>Projects</div>
                                 </Link>
                             </motion.div>
@@ -345,7 +344,7 @@ function MobileNavbar({ setHomeKey }) {
                                 
                                 style={{ willChange: 'transform, opacity' }}
                             >
-                                <Link to="/contact" class="no-style" onClick={() => handleLinkClick('/contact')} disabled={isLinkDisabled}>
+                                <Link to="/contact" class="no-style" onClick={() => handleLinkClick('/contact')}>
                                     <div className='menuItem'>Contact</div>
                                 </Link>
                             </motion.div>
@@ -357,7 +356,7 @@ function MobileNavbar({ setHomeKey }) {
                                 
                                 style={{ willChange: 'transform, opacity' }}
                             >
-                                <Link to="/skills" class="no-style" onClick={() => handleLinkClick('/skills')} disabled={isLinkDisabled}>
+                                <Link to="/skills" class="no-style" onClick={() => handleLinkClick('/skills')}>
                                     <div className='menuItem'>Skills</div>
                                 </Link>
                             </motion.div>

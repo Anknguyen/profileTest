@@ -59,35 +59,30 @@
 }
 
 .overflowContainer {
-    overflow-y: auto; /* Enable vertical scrolling */
-    flex-grow: 1; /* Allow it to grow and take up remaining space */
-    scrollbar-width: none; /* Make the scrollbar thin for Firefox */
-    position: relative; /* Establish positioning context */
-}
-
-.scroll-bar-container {
-    position: absolute; /* Position the scrollbar absolutely */
-    top: 18%;
-    right: 10px;
-    width: 5px; /* Adjust the width of the vertical bar */
-    height: 57%;
-    background-color: #cdf1f0; /* Adjust the color of the vertical bar */
-    z-index: 9998;
-    border-radius: 5px; /* Adjust the border radius */
-}
-
-.scroll-bar {
-    border-radius: 5px;
-    min-height: 1%;
-    max-height: 57%;
-    position: absolute; /* Position the scrollbar absolutely */
-    top: 18%;
-    right: 10px;
-    width: 5px; /* Adjust the width of the vertical bar */
-    height: 1%;
-    background-color: #3aafa9; /* Adjust the color of the vertical bar */
-    z-index: 9999;
-    transition: height 0.1s ease-out; /* Smooth transition for the height */
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #3aafa9 #feffff; /* Firefox */
+    position: relative;
+    margin-right: 1px;
+  }
+  
+  /* WebKit browsers (Chrome, Safari, Edge) */
+  .overflowContainer::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+  }
+  
+  .overflowContainer::-webkit-scrollbar-track {
+    background: #aaf3f3; /* Background of the scrollbar track */
+  }
+  
+  .overflowContainer::-webkit-scrollbar-thumb {
+    background-color: #3aafa9; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+  }
+  
+  .overflowContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #2c837e; /* Color of the scrollbar thumb on hover */
   }
 
 .textContainer {
@@ -110,7 +105,7 @@
 
 .bottomDiv{
     margin-left: 80px;
-    padding-top: 30px;
+    padding-top: 15px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -143,34 +138,6 @@
     margin: 0; /* Remove margin */
     padding: 10px; /* Adjust padding */
     position: relative;
-}
-
-.line1 {
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    height: 4px;
-    width: 100%;
-    background-color: #cdf1f0;
-    transition: width 0.5s;
-}
-
-.line2 {
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    height: 4px;
-    width: 0%;
-    background-color: #3aafa9;
-    transition: width 0.5s;
-}
-
-.projectsBtn:hover .line2 {
-    width: 100%;
-}
-
-.projectsBtn:hover {
-    color: #2c837e;
 }
 
 .blob {
@@ -230,11 +197,19 @@
     z-index: 1;
 }
 
+.bottomDiv a {
+    text-decoration: none; /* Remove underline from links */
+    color: #3aafa9; /* Set link color */
+    font-size: 1.5rem; /* Set font size */
+    font-family: 'Montserrat', sans-serif; /* Set font family */
+    transition: color 0.3s; /* Smooth transition for color change */
+    height: 60px;
+    width: 200px;
+    position: relative;
+  }
+
 .aboutProjectsButton {
     border-radius: 25px;
-    position: absolute;
-    bottom: 50px;
-    left: 0%;
     width: 200px;
     height: 50px;
     background-color: #69c2bf;
@@ -243,10 +218,12 @@
     font-family: 'Montserrat', sans-serif;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+    margin-bottom: 15px;
     overflow: hidden; /* Ensure the pseudo-element is contained within the button */
     transition: color 0.2s; /* Transition for text color */
     z-index: 1;
+    position: absolute;
+    
 }
 
 .aboutProjectsButton::before {
@@ -256,7 +233,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #47b9b6;
+    background-color: #21b4af;
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
     z-index: -1; /* Ensure the pseudo-element is behind the text */

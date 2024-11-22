@@ -1,4 +1,4 @@
-
+/* 
 
 ::-webkit-scrollbar {
   display: none;
@@ -9,8 +9,8 @@
 }
 
 html, body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
@@ -18,11 +18,42 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 ::-webkit-scrollbar-button {
   display: none;
+} */
+
+/* Apply to the entire document */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #777777 #ececec; /* Firefox */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 6px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the scrollbar thumb */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Ensure the scrollbar is always visible */
+body {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {

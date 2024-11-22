@@ -1,121 +1,87 @@
-import React, { useEffect } from 'react';
-import { FaAngleDoubleDown } from 'react-icons/fa';
+import React, { useRef } from 'react';
 import '../css/Project.css';
+import { motion, useInView } from 'framer-motion';
+
 
 const Projects = () => {
-  
-  useEffect(() => {
-
-    const projects = document.querySelectorAll('.project');
-    const downArrow = document.querySelector('.downArrow');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('slide-in');
-        } else {
-          entry.target.classList.remove('slide-in');
-        }
-      });
-    }, {
-      threshold: 0
-    });
-
-    projects.forEach(project => {
-      observer.observe(project);
-    });
-
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = (scrollTop / scrollHeight) * 100;
-
-      if (scrollPercentage > 15) {
-        downArrow.classList.add('hidden');
-      } else {
-        downArrow.classList.remove('hidden');
-      }
-    };
-
-    const handleClick = () => {
-      smoothScrollToBot(1000);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      projects.forEach(project => {
-        observer.unobserve(project);
-      });
-    };
-  }, []);
-
-  const smoothScrollToBot = (duration) => {
-    const start = window.scrollY;
-    const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
-
-    const documentHeight = Math.max(document.body.scrollHeight);
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    const destinationOffset = documentHeight;
-    const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
-
-    const scroll = (currentTime) => {
-        const time = Math.min(1, ((currentTime - startTime) / duration));
-        const timeFunction = 1 - Math.pow(1 - time, 3);
-        window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
-
-        if (window.scrollY === destinationOffsetToScroll) {
-            return;
-        }
-
-        requestAnimationFrame(scroll);
-    };
-
-    scroll(startTime);
+  const variants = {
+    hidden: { opacity: 0, y: 250 },
+    visible: { opacity: 1, y: 0 },
   };
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const ref5 = useRef(null);
+
+  const inView1 = useInView(ref1, { threshold: 0 });
+  const inView2 = useInView(ref2, { threshold: 0 });
+  const inView3 = useInView(ref3, { threshold: 0 });
+  const inView4 = useInView(ref4, { threshold: 0 });
+  const inView5 = useInView(ref5, { threshold: 0 });
 
   return (
     <div className='projectsContainer'>
-      <button className='downArrow'>
-        <i class="icon"><FaAngleDoubleDown /></i>
-      </button>
       <div className='projects'>
-        <a className='project project1b bProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project1 aProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project2b bProject rightSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project2 aProject rightSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project3b bProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project3 aProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project4b bProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project4 aProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project5b bProject rightSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project5 aProject rightSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project6b bProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
-        <a className='project project6 aProject leftSlide'>
-          <p className='projectTitle'>Project</p>
-        </a>
+        <div className='leftColumn'>
+          <motion.div
+            className='project project1'
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          >
+            <div className='projectTitle'>Project 1</div>
+          </motion.div>
+
+          <motion.div
+            className='project project2'
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          >
+            <div className='projectTitle'>Project 2</div>
+          </motion.div>
+
+          <motion.div
+            className='project project3'
+            ref={ref3}
+            initial="hidden"
+            animate={inView3 ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          >
+            <div className='projectTitle'>Project 3</div>
+          </motion.div>
+        </div>
+        <div className='rightColumn'>
+          <motion.div
+            className='project project4'
+            ref={ref4}
+            initial="hidden"
+            animate={inView4 ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          >
+            <div className='projectTitle'>Project 4</div>
+          </motion.div>
+
+          <motion.div
+            className='project project5'
+            ref={ref5}
+            initial="hidden"
+            animate={inView5 ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          >
+            <div className='projectTitle'>Project 5</div>
+          </motion.div>
+        </div>
+
         <div className='codeSnippet1'>
           <pre>
             <code>
