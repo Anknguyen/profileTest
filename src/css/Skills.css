@@ -1,5 +1,5 @@
 .backgroundSkills{
-    background-color: #71a7a5;
+    background-color: white;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -11,7 +11,7 @@
 
 .skillsBackgroundContainer {
     padding-top: 120px;
-    background-color: #71a7a5;
+    background-color: white;
     height: 90%;
     width: 100vw;
     display: flex;
@@ -25,7 +25,7 @@
 }
 
 .frontendLeft, .backendLeft {
-    color: white;
+    color: black;
     font-size: 2em;
     font-weight: 500;
     text-align: start;
@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     height: auto;
-    border-bottom: white 2px solid;
+    border-bottom: black 2px solid;
 }
 
 .skillsContainer {
@@ -67,24 +67,23 @@
 .backend .icon, .frontend .icon {
     padding: 30px 30px 10px 30px;
     font-size: 5em;
-    color: white;
+    color: black;
     transition: color 0.3s, background 0.3s, transform 0.4s;
     user-select: none;
 }
 
 .backend .icon:hover, .frontend .icon:hover {
-    color: #3aafa9;
-    background-color: white;
-    /* transform: translateY(-20px); */
+    color: #72baf5;
+    background-color: black;
 }
 
 .backend .icon:hover .iconLine, .frontend .icon:hover .iconLine {
-    background-color: #3aafa9;
+    background-color: #72baf5;
     transform: translateY(20px);
 }
 
 .backend .icon:hover .iconName, .frontend .icon:hover .iconName {
-    color: #3aafa9;
+    color: #72baf5;
     transform: translateY(-25px);
 }
 
@@ -93,7 +92,7 @@
     margin-top: 15px;
     width: 100%;
     height: 2px;
-    background-color: white;
+    background-color: black;
     border-radius: 5px;
 }
 
@@ -102,7 +101,7 @@
     transition: color 0.3s, background 0.3s, transform 0.3s;
     padding-top: 0px;
     font-size: .2em;
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }

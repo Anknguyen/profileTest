@@ -12,7 +12,7 @@
     .projectsTitle{
       font-size: 3.5rem;
       font-weight: 600;
-      color: white;
+      color: black;
       margin-top: 5vh;
       margin-bottom: 5vh;
       font-family: 'Montserrat', sans-serif;
@@ -32,46 +32,6 @@
       overflow: hidden;
     }
   
-    .downArrow {
-      border: none;
-      background: none;
-      padding: 0;
-      appearance: none;
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #94dddb;
-      opacity: 0.6;
-      font-size: 2em;
-      cursor: pointer;
-      user-select: none;
-      z-index: 20;
-      transition: opacity 0.6s;
-      animation: bounce 2s infinite;
-    }
-  
-    .downArrow:hover {
-      opacity: 1;
-    }
-  
-    .downArrow.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-  
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-      }
-      40% {
-        transform: translateX(-50%) translateY(-10px);
-      }
-      60% {
-        transform: translateX(-50%) translateY(-5px);
-      }
-    }
-  
     .PMContainer{
       padding-top: 30px;
       width: 90vw;
@@ -80,7 +40,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #68b9b7;
+      background: linear-gradient(to bottom, rgb(217, 232, 245) 30%, white 70%);
       border-radius: 25px;
       padding-bottom: 20px;
       margin-bottom: 20px;
@@ -138,14 +98,9 @@
       bottom: 0;
       border-radius: 35px;
       z-index: 1; /* Ensure the text is above the pseudo-element */
-      background-color: #32c0c0;
+      background-color: black;
       border: none;
       transition: background-color 0.3s;
-    }
-
-    .projectTitle:hover
-    {
-      background-color: #178f8f;
     }
 
 
@@ -171,7 +126,7 @@
       margin-bottom: 30px;
       width: 70vw; /* Adjust the width as needed */
       height: 40px; /* Adjust the height as needed */
-      background-color: #178f8f; /* Adjust the background color as needed */
+      background-color: black; /* Adjust the background color as needed */
       border-radius: 35px; /* Make it rounded */
       position: relative;
       cursor: pointer;
@@ -181,7 +136,7 @@
     .toggleCircle {
       width: 35vw; /* Half the width of the bar */
       height: 100%; /* Adjust the height as needed */
-      background-color: #49d3d3; /* Adjust the background color as needed */
+      background-color: white; /* Adjust the background color as needed */
       border-radius: 35px; /* Keep the edges rounded */
       position: absolute;
       top: 0;
@@ -229,5 +184,6 @@
 
     .shown {
       opacity: 1;
+      color:black;
     }
   }

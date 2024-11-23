@@ -2,14 +2,13 @@
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
-  background-color: #096863;
+  background-color: #f0f0f0;
   flex-direction: column;
   width: 100vw;
   height: 100%;
 }
 
 .projectsHeader{
-  
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 4.5em;
@@ -72,13 +71,14 @@
   flex-direction: row;
   padding-top: 120px;
   height: 100%;
-  background-color: #096863;
+  background-color: #f0f0f0;
   width: 96vw;
   position: relative;
   transition: width 0.5s ease;
   justify-content: center;
   padding-bottom:25px;
   overflow: hidden;
+  padding-bottom: 10px;
   
 }
 
@@ -90,6 +90,9 @@
   overflow: hidden;
   width: 50%;
   height: 100%;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .rightColumn {
@@ -100,6 +103,9 @@
   overflow: hidden;
   width: 50%;
   height: 100%;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .project{
@@ -108,7 +114,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0aadad;
+  background-color: white;
+  opacity: 0.05;
   position: relative;
   z-index:1;
   overflow: hidden;
@@ -119,7 +126,7 @@
 
 .project:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-  background-color: #32c0c0;
+  background-color: #f0f0f0;
 }
 
 /* Left Row */
@@ -159,7 +166,7 @@
 
 
 .projectTitle {
-  color: white;
+  color: black;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   font-weight: 500;

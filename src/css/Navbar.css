@@ -41,7 +41,7 @@
   .navHomeContainer:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* .navHomeButton {
     width: 120px;
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +49,7 @@
     align-items: center; 
     justify-content: center; 
     height:stretch;
-    color: white;
+    color: black;
     border: none;
     padding: 10px 40px;
     text-decoration: none;
@@ -65,7 +65,7 @@
   
   .navHomeButton:hover {
     color: black; 
-    background-color: white;
+    background-color: black;
   } */
 
   .navHomeButton {
@@ -88,7 +88,7 @@
       display: block;
       width: 100%;
       height: 3px; /* Thinner bars for a modern look */
-      background-color: white; /* Adjust color as needed */
+      background-color: black; /* Adjust color as needed */
       transition: width 0.4s;
       position: relative;
       border-radius: 15px;
@@ -102,16 +102,15 @@
       width: 25%;
   }
 
-  
   .rightDiv {
     flex: 1;
     padding-right: 2vw;
     padding-top: 0px;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
     align-items: center;
     background-color: transparent;
-    color: white;
+    color: black;
     font-size: 35px;
     font-weight: 500;
     cursor: default;
@@ -123,12 +122,12 @@
   
   .rightNavHomeIcon {
     text-decoration: none;
-    color: white;
+    color:black;
     transition:color 0.35s;
   }
   
   .rightNavHomeIcon:hover {
-    color: black; /* Change color on hover */
+    color: rgb(119, 119, 119); /* Change color on hover */
   }
 
   .middleDiv{
@@ -140,7 +139,7 @@
   }
 
   .navTitle{
-    color:white;
+    color:black;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     opacity:0;
@@ -170,7 +169,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(7, 165, 160);
+    background-color: rgb(235, 235, 235);
     display: flex;
     flex-direction: column; /* Make it vertical */
     justify-content: center; /* Center items vertically */
@@ -180,15 +179,15 @@
    }
 
 .menuItem {
+    font-weight: 500;
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(82px, 2.5vw, 140px); /* Dynamically change font size */
     transition: transform 1s, color 0.4s ease-out; /* Smooth transition for transform and color */
 }
 
 .menuCard {
-
     user-select: none;
     /* margin-top: 2.5vh;
     margin-bottom: 2.5vh; */
@@ -199,7 +198,7 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid black;
      /* Add a bottom border */
 }
 

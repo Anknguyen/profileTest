@@ -1,11 +1,11 @@
 .contactBackgroundContainer{
     height: 100vh;
     width: 100vw;
-    background-color: #2b3d45;
+    background-color: white;
 }
 .contactTitle{
     font-size: 3em;
-    color: white;
+    color: black;
     text-align: center;
     margin-bottom: 60px;
     font-family: 'Montserrat', sans-serif;
@@ -18,8 +18,7 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    /* background-color: rgb(184, 184, 184); */
-    background-color: #2b3d45;
+    background-color: white;
     box-sizing: border-box;
     padding: 100px;
     position:relative;
@@ -60,6 +59,7 @@
     width: 100%;
     padding: 25px; /* Increase padding for larger input area */
     border: 1px solid #ccc;
+    background-color: rgb(253, 253, 253);
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1.1em; /* Increase font size */
@@ -104,14 +104,14 @@
     margin-top: auto; /* Push the bottomContactDiv to the bottom */
     text-align: center;
     width: 100%;
-    padding: 80px 20px 20px 20px;
+    padding: 60px 20px 20px 20px;
 }
 
 .botNavContactIcon {
     display: inline-flex; /* Use flexbox to align items */
     align-items: center; /* Center items vertically */
     margin: 5px 20px;
-    color: white;
+    color: black;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
@@ -133,8 +133,15 @@
     position: relative;
     margin-bottom: 15px;
     overflow: visible;
-    
 }
+
+input::placeholder {
+    color: black;
+  }
+  
+  textarea::placeholder {
+    color: black;
+  }
 
 .floatingLabel {
     font-family: 'Montserrat', sans-serif;
@@ -144,7 +151,7 @@
     transform: translateY(-50%);
     transition: all 0.3s ease;
     pointer-events: none;
-    color: #aaa;
+    color: black;
     z-index: 1; /* Ensure the label appears above the input field */
 }
 
@@ -156,6 +163,7 @@
     border-radius: 4px;
     outline: none;
     z-index: 0; /* Ensure the input field is below the label */
+    resize: vertical;
 }
 
 .inputContainer input:focus + .floatingLabel,
@@ -168,5 +176,5 @@
     left: 10px;
     transform: translateY(-70%); /* Remove the translateY to position it correctly */
     font-size: 0.9em;
-    color: white;
+    color: black;
 }

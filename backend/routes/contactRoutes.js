@@ -1,25 +1,38 @@
 // contactRoutes
 const express = require('express');
+const nodemailer = require('nodemailer');
 const router = express.Router();
-const db = require('./db');
 
-// Function to insert data into the database
-const insertIntoContactTable = (formData, callback) => {
-    const { name, email, message } = formData;
-    const query = 'INSERT INTO contactTable (name, email, message) VALUES (?, ?, ?)';
-    db.query(query, [name, email, message], callback);
-};
+// Configure nodemailer
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
+});
 
 // POST endpoint to handle form submission
 router.post('/api/contact', (req, res) => {
     const formData = req.body;
-    insertIntoContactTable(formData, (err, results) => {
-        if (err) {
-            console.error('Error inserting data into the database:', err);
-            res.status(500).send('Error submitting form data');
-            return;
+    console.log('Form data:', formData);
+
+    // Email options
+    const mailOptions = {
+        from: formData.email,
+        to: process.env.EMAIL_USER,
+        subject: `Contact Form Submission from ${formData.name}`,
+        text: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('Error sending email:', error);
+            return res.status(500).json({ error: 'Failed to send email' });
         }
-        res.status(200).send('Form data submitted successfully');
+        console.log('Email sent:', info.response);
+        res.status(200).json({ message: 'Email sent successfully' });
     });
 });
 
