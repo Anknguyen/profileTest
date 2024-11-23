@@ -89,10 +89,6 @@
         margin-top: 20px;
         transition: background-color 0.2s;
     }
-
-    .aboutProjectsButton:hover {
-        background-color: #5cb9b6;
-    }
 }
 
 @media (min-width: 830px) and (max-width: 1024px)
