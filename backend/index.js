@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const contactRoutes = require('./routes/contactRoutes');
 const projectRoutes = require('./routes/projectRoutes');
-const db = require('./routes/db'); // Import the database connection
 
 const app = express();
 const port = process.env.PORT || 3001; // Use a different port than your React app
@@ -11,8 +10,6 @@ const port = process.env.PORT || 3001; // Use a different port than your React a
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-
-module.exports = db; // Export the database connection
 
 app.use(contactRoutes);
 app.use(projectRoutes);
