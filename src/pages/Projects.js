@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/project'); // Fetch all projects
+        const response = await fetch('https://profileanbackend-f2gyccbpdabpbha8.eastus2-01.azurewebsites.net/api/project');
         const data = await response.json();
         setProjects(data);
       } catch (error) {

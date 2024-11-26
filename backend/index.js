@@ -6,7 +6,7 @@ const projectRoutes = require('./routes/projectRoutes');
 const db = require('./routes/db'); // Import the database connection
 
 const app = express();
-const port = 3001; // Use a different port than your React app
+const port = process.env.PORT || 3001; // Use a different port than your React app
 
 // Middleware
 app.use(bodyParser.json());

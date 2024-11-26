@@ -26,7 +26,7 @@ const MobileProjects = () => {
     const fetchProjects = async () => {
       const type = isToggled ? 'app' : 'web';
       console.log(type);
-      const response = await fetch('http://localhost:3001/api/' + type);
+      const response = await fetch(`https://profileanbackend-f2gyccbpdabpbha8.eastus2-01.azurewebsites.net/api/${type}`);
       const data = await response.json();
       setProjects(data);
     };
