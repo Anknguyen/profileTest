@@ -129,7 +129,7 @@
 }
 
 .descProjectContainer {
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(235, 235, 235);
   height: 100%;
   width: 100%;
   display: flex;
@@ -166,5 +166,5 @@
 }
 
 .projectLinks a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(143, 143, 143);
 }
