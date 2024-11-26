@@ -126,7 +126,7 @@
       margin-bottom: 30px;
       width: 70vw; /* Adjust the width as needed */
       height: 40px; /* Adjust the height as needed */
-      background-color: black; /* Adjust the background color as needed */
+      background-color: rgb(94, 94, 94); /* Adjust the background color as needed */
       border-radius: 35px; /* Make it rounded */
       position: relative;
       cursor: pointer;

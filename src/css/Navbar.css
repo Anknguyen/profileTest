@@ -86,7 +86,7 @@
 
   .navHomeButton .bar {
       display: block;
-      width: 100%;
+      width: 90%;
       height: 3px; /* Thinner bars for a modern look */
       background-color: black; /* Adjust color as needed */
       transition: width 0.4s;
@@ -213,7 +213,7 @@
 
 .menuHome:hover .menuItem {
     color: black;
-    transform: translateX(-10vw);
+    transform: translateX(-17vw);
 }
 
 .menuHome:hover + .menuContainer {
@@ -230,7 +230,7 @@
 
 .menuProjects:hover .menuItem {
     color: black;
-    transform: translateX(10vw);
+    transform: translateX(17vw);
 }
 
 .menuContact {
@@ -243,7 +243,7 @@
 
 .menuContact:hover .menuItem {
     color: black;
-    transform: translateX(-10vw);
+    transform: translateX(-17vw);
 }
 
 .menuSkills {
@@ -257,7 +257,7 @@
 
 .menuSkills:hover .menuItem {
     color: black;
-    transform: translateX(10vw);
+    transform: translateX(17vw);
 }
 
 .innerMenu {

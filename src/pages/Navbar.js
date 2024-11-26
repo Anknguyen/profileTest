@@ -231,7 +231,7 @@ function Navbar() {
 
         setTimeout(() => {
             setIsButtonDisabled(false);
-        }, 1000);
+        }, 700);
     };
 
     const handleLinkClick = (path) => {

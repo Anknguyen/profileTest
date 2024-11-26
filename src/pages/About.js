@@ -75,52 +75,16 @@ function About() {
                             animate={inView ? 'visible' : 'hidden'}
                             variants={textVariants}
                         >
-                            {/* <h4><Typewriter
-                                    words={["Passionate software developer"]}
-                                    loop={1}
-                                    cursor
-                                    cursorStyle=''
-                                    typeSpeed={30}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                            /></h4> */}
-                            <h4>Passionate software developer</h4>
-                            <p>I am a passionate software developer with a strong foundation in both frontend and backend coding. I have just recently graduated, and I’m excited to see where this road leads me.</p>
-                            {/* <h4><Typewriter
-                                    words={["Diverse skillset"]}
-                                    loop={1}
-                                    cursor
-                                    cursorStyle=''
-                                    typeSpeed={40}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                            /></h4> */}
+                            <h4>Software developer</h4>
+                            <p>I am a software developer based in North Carolina with a strong foundation in both frontend and backend. I have just recently graduated, and I’m excited to see where this road leads me.</p>
+                            
                             <h4>Diverse skillset</h4>
-                            <p>I have a diverse skill set that includes proficiency in Python, JavaScript, Java, and SQL. My journey into programming began when my parents introduced me to their work, where I discovered a fascination with how code can transform ideas into functional applications. </p>
-                            {/* <h4><Typewriter
-                                    words={["Improvement oriented"]}
-                                    loop={1}
-                                    cursor
-                                    cursorStyle=''
-                                    typeSpeed={40}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                            /></h4> */}
+                            <p>I have a skill set that includes proficiency in Python, JavaScript, Java, and SQL. My journey into programming began when my parents introduced me to their work, where I discovered a fascination with how code can transform ideas into functional applications. </p>
+                            
                             <h4>Improvement oriented</h4>
                             <p>Though I’m still early in my career, I’m always eager to learn and improve. I’m excited about opportunities where I can collaborate with experienced engineers, solve complex problems, and continue growing my technical skill set. My adaptability, attention to detail, and curiosity drive me to constantly seek new challenges and better solutions.</p>
-                            {/* <h4><Typewriter
-                                    words={["Looking for new connections"]}
-                                    loop={1}
-                                    cursor
-                                    cursorStyle=''
-                                    typeSpeed={40}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                            /></h4> */}
-                            <h4>Looking for new connections</h4>
-                            <p>
-                            I’m excited about the future and ready to contribute to a team where I can not only apply what I’ve learned but also pick up new skills along the way. Feel free to contact me if you'd like to chat more about technology, software development, or potential opportunities!
-                            </p>
+                            
+                            
                         </motion.div>
                     </div>
                     <div className="bottomDiv">

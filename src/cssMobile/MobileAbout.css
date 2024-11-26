@@ -76,7 +76,7 @@
     .aboutProjectsButton {
         border-radius: 25px;
         position:absolute;
-        bottom: 180px;
+        bottom: 120px;
         left: 10%;
         width: 200px;
         height: 50px;
@@ -89,6 +89,31 @@
         margin-top: 20px;
         transition: background-color 0.2s;
     }
+
+    /* .blob1 {
+        width: 200px;
+        height: 200px;
+        bottom: -50px;
+        right: -50px;
+        z-index: 0;
+    }
+    
+    .blob2 {
+        width: 150px;
+        height: 150px;
+        bottom: -30px;
+        right: 100px;
+        z-index: 0;
+    }
+    
+    .blob3 {
+        width: 180px;
+        height: 130px;
+        bottom: -65px;
+        right: 210px;
+        clip-path: ellipse(50% 50% at 70% 50%) !important;
+        z-index: 0;
+    } */
 }
 
 @media (min-width: 830px) and (max-width: 1024px)
